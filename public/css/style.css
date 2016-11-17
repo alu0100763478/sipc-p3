@@ -1,0 +1,24 @@
+.columna2{  	padding-top: 3em; }
+.columna2 .row {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 1em 25%;
+}
+
+.formulario{
+
+  padding-top: 1em;
+  margin: 1em;
+
+}
+
+.carousel-inner{
+  margin-top: 2em;
+}
+
+#home{padding-top: 1em; margin-left: 1em; height: 100px;}
+#usuario{padding-top: 1em; margin-left: 1em; height: 100px;}
+#registro{padding-top: 1em; margin-left: 1em; height: 100px;}
+@media (max-width: 1000px) and (min-width: 300px) {
+#myCarousel{display: none;}
+}

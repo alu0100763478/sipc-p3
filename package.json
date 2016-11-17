@@ -1,0 +1,11 @@
+{
+  "name": "practica3",
+  "version": "0.0.0",
+  "description": "Utilizar Node, Express y Firebase",
+  "main": "server.js",
+  "repository": "",
+  "author": "Rossiel D. Gonzalez",
+  "dependencies": {
+    "express": "~3.2.4"
+  }
+}

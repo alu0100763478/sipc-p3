@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="datosApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Práctica 2 SIPC">
+    <meta name="author" content="Rossiel D. González">
+
+    <title>ULL Social</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+    <!-- Own CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+
+    <!-- FAVICON-->
+    <link rel="icon" type="image/png" href="css/favicon.png">
+
+</head>
+
+<body>
+
+  <!-- Barra de navegacion -->
+    <ul id = "myTab" class = "nav nav-tabs">
+       <li><a href = "#home" data-toggle = "tab">Inicio</a></li>
+
+       <li><a href = "#registro" data-toggle = "tab" name="registro">Regístrate</a></li>
+
+       <li><a href = "#usuario" data-toggle = "tab">Usuario</a></li>
+    </ul>
+    <div id = "myTabContent" class = "tab-content">
+
+       <div class = "tab-pane fade" id = "home">
+          <p> ULL Social es un página en donde los estudiantes de la ULL podrán ponerse en contacto para compartir los gastos del transporte. Regístrate para poder obtener los beneficios de ULL Social</p>
+       </div>
+
+       <div class = "tab-pane fade mt-xs-5" id = "registro" >
+        <form method="get" onsubmit="passworConfirm()">
+
+              <div class="col-xs-6 formulario">
+                  <div class="form-group">
+                      <label for="inputnombre">Nombre</label>
+                      <input type="text" class="form-control" ng-model="usuario.nombre" placeholder="Nombre" id="name">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputapellido">Apellidos</label>
+                      <input type="text" class="form-control" ng-model="usuario.apellidos"  placeholder="Apellido" id="apellido">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" ng-model="usuario.email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputPassword">Contraseña</label>
+                      <input type="password" class="form-control" placeholder="Contraseña" id="pass">
+                  </div>
+                  <div class="form-group">
+                      <label for="inputPassword2">Repite la contraseña</label>
+                      <input type="password" class="form-control" placeholder="Contraseña" id="pass_confirm">
+                  </div>
+                      <button type="submit" name="action" value="Enviar" />Enviar</button>
+                </div>
+              </form>
+       </div>
+
+       <div class = "tab-pane fade" id = "usuario">
+        ¡Bienvenido {{usuario.nombre}} {{usuario.apellidos}}!
+        Pronto recibirás un correo en la dirección: {{usuario.email}} para confirmar tu registro. Puedes acceder a tu correo haciendo clic aquí: <a href="https://accounts.google.com/ServiceLogin?service=mail&continue=https://mail.google.com/mail/&hl=es#identifier">Visita tu correo</a>
+       </div>
+
+    </div>
+
+
+    <!-- Page Content -->
+    <div class="container col-xs-12">
+
+        <!-- Cabecera -->
+        <div class="row">
+            <div class="col-md-8">
+              <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                  <div class="active item"><img  src="img/cabecera1.jpg" alt="imagencabecera" /></div>
+                  <div class="item"><img  src="img/cabecera2.jpg" alt="imagencabecera" /></div>
+
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+            <!-- /.col-md-8 -->
+            <div class="col-md-4">
+                <h1>ULL Car</h1>
+                <p>Te ayudamos a encontrar otros estudiantes universitarios para que puedas compartir los gastos del transporte. Regístrate para que comiences a disfrutar de la primera página exclusiva para estudiantes de la ULL.</p>
+
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Cuerpo -->
+        <div class="row">
+            <!-- Columna 1/.col-md-3 -->
+            <div class="col-md-3">
+                <h2>¿Qué es ULL Car?</h2>
+                <p>Con ULL Car podrás:
+                  <li>Crear eventos e incribirse a otros ya existentes.
+                  <li>Invitar y compartir con amigos eventos mediante redes sociales.
+                  <li>Al seleccionar un evento del calendario se desplagrará la información sobre éste así como opiniones de otros usuarios.
+                  <li>Ranking con los mejores creadores de eventos, su valoración y los eventos que les han hecho alcanzar su puesto en el ranking. </p>
+
+            </div>
+            <!-- Columna 2 /.col-md-6 -->
+            <div class="col-md-6 columna2">
+                <p>Para poder usar la página necesitas tener una cuenta de usuario.</p>
+                <!-- /.col-md-2 -->
+                <div class="row">
+                  <div class="col-md-4">
+                      <a href="#registro"><button type="button" class="btn btn-default">Regístrate</button></a>
+                  </div>
+                  <!-- /.col-md-4 -->
+                  <div class="col-md-8">
+                      <a href="IniciaSesion.html"><button type="button" class="btn btn-default">Inicia Sesión</button></a>
+                  </div>
+                </div>
+                <p> Esto permite que puedas saber cuál es la popularidad de un conductor, cuántas personas ya comparten coche con él, etc ¡Pruébalo ya!</p>
+
+
+            </div>
+            <!-- Columna 3/.col-md-3 -->
+            <div class="col-md-3">
+                <h2>¿Por qué elegir ULL Car?</h2>
+                <p>Esta es la primera web para que varios alumnas de la ULL se puedan comunicar y compartir gastos. Es una página específica para alumnos, lo que te permite que los horarios sean los de la universidad. Además permite mostrar las preferencias de cada conductor (permite fumar, beber, comer, etc.), valorar la experiencia de las personas que comparten un determinado vehículo y mucho más.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; ULL Car 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Añadir Firebase a la aplicación web -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBEIfmZdrebE0t-VpuCYJMnEKfuuJMRtzU",
+        authDomain: "practica3-93031.firebaseapp.com",
+        databaseURL: "https://practica3-93031.firebaseio.com",
+        storageBucket: "practica3-93031.appspot.com",
+        messagingSenderId: "1020321724154"
+      };
+      firebase.initializeApp(config);
+    </script>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Carrusel para cabecera -->
+    <script>
+    $(document).ready(function(){
+        $('.myCarousel').carousel({
+            interval: 3000
+        });
+    });
+    </script>
+
+        <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Angular JS -->
+    <script src="js/angular.min.js"></script>
+
+  <!-- Mostrar datos de Inicio de Sesión -->
+    <script src="js/datosInicio.js"></script>
+
+
+</body>
+
+</html>
